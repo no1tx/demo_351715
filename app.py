@@ -11,6 +11,11 @@ Rax = Pet('dinosaur', '2')
 Vasya.type = 'dog'
 
 
+@web_app.get('/platform')
+def platform():
+    return sys.platform
+
+
 @web_app.get('/pets/')
 def pets():
     return 'Pet Vasya is ' + Vasya.type + ' and has ' + Vasya.legs + ' legs and ' + 'Pet Rax is ' + Rax.type + ' and has ' + Rax.legs + ' legs'
